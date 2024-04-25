@@ -14,5 +14,5 @@ auth_token = {
 
 kit_body = {
     "name": "Mi_conjunto",
-    "cardId": ""
+    "cardId": "0"
 }

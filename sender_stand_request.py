@@ -7,17 +7,13 @@ def post_new_user(body):
                          json=body,
                          headers=data.headers)
 
-response_u = post_new_user(data.user_body)
-"""print(response_u.status_code)
-print(response_u.json()['authToken'])"""
+response_user = post_new_user(data.user_body)
 
 
 def post_new_kit(kit_body):
     return requests.post(configuration.URL_SERVICE + configuration.KITS_PATH,
                          json=kit_body,
-                         headers=data.auth_token)
+                         headers=response_user.json())
 
-"""response_k = post_new_kit(data.kit_body)
-print(response_k.status_code)
-print(response_k.json())"""
+response_kit = post_new_kit(data.kit_body)
 
