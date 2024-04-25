@@ -9,7 +9,7 @@ user_body = {
 }
 
 auth_token = {
-    "Authorization": "Bearer 3bf88d3d-f63b-4104-8656-8428366b5fe3"
+    "Authorization": "Bearer"
 }
 
 kit_body = {
