@@ -1,5 +1,5 @@
 headers = {
-    "Content-Type": "application/json",
+    "Content-Type": "application/json"
 }
 
 user_body = {
@@ -9,7 +9,6 @@ user_body = {
 }
 
 auth_token = {
-    "Authorization": "Bearer"
 }
 
 kit_body = {

@@ -10,13 +10,13 @@ def get_kit_name(new):
 
 def assert_positivo(kit_body):
     kit_name = get_kit_name(kit_body)
-    response = sender_stand_request.post_new_kit(kit_name,sender_stand_request.post_new_user(data.user_body).json())
+    response = sender_stand_request.post_new_kit(kit_name, sender_stand_request.post_new_user(data.user_body).json()["authToken"])
     assert response.status_code == 201
     assert response.json()["name"] == kit_body
 
 
 def assert_negativo(kit_body):
-    response = sender_stand_request.post_new_kit(kit_body,sender_stand_request.post_new_user(data.user_body).json())
+    response = sender_stand_request.post_new_kit(kit_body, sender_stand_request.post_new_user(data.user_body).json()["authToken"])
     assert response.status_code == 400
 
 
